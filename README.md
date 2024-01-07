@@ -7,6 +7,9 @@
 -form validations
 -use ref hook
 -create sign up user
+-register tmdb api and create an app nd get access token
+-Get data from TMDB now playing movies list api
+-
 
 #features
 -Login/signup page
@@ -35,3 +38,4 @@ Netflix gpt
 ->store->slice->again store->and rootapp.js->provider from react redux
 
 -->on auth state change is used when sign in signout,any auth change
+-->when we use dependence array as empty means we will render it only once but we will get it two times because of react strict mode which is in index.js
