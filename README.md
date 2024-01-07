@@ -22,6 +22,10 @@
 Netflix gpt
     -search bar
     -movie suggestions
+-Bugfix->signup user displayname and profile photo update
+-Bugfix->if the user is not logged in redirect/browse to login page and vicecersa
+-unsubscribed to the onauthstatechange call back
+-add hardcoded value to the constants file
 
 
 **before login firebase we should use command npm install -g firebase tools
