@@ -39,3 +39,4 @@ Netflix gpt
 
 -->on auth state change is used when sign in signout,any auth change
 -->when we use dependence array as empty means we will render it only once but we will get it two times because of react strict mode which is in index.js
+-->gpt search feature
