@@ -9,4 +9,5 @@ export const API_OPTIONS = {
   };
   export const SRC_URL='https://assets.nflxext.com/ffe/siteui/vlv3/c31c3123-3df7-4359-8b8c-475bd2d9925d/15feb590-3d73-45e9-9e4a-2eb334c83921/IN-en-20231225-popsignuptwoweeks-perspective_alpha_website_large.jpg';
   export const SUPPORTED_LANGUAGES=[{identifier:"en",name:"English"},{identifier:"hindi",name:"Hindi"},{identifier:"spanish",name:"Spanish"},{identifier:"tel",name:"Telugu"}]
+  export const OPENAI_KEY="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";
 export const IMG_CDN="https://image.tmdb.org/t/p/w500"
