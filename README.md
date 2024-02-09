@@ -43,3 +43,4 @@ Netflix gpt
 -->**(Multi-Lnaguage Feature in our app)
 
 -->**promise.all is where all the promise arrays will be resolved when we use await before it and wait until it get all the promises resolved***.
+--->even after going from gpt page to home and vce versa even the gpt search page is same because of persistent redux store

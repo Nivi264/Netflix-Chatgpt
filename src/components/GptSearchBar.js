@@ -1,9 +1,10 @@
 import React, { useRef } from 'react'
 import lang from '../utils/languageConstant'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import openai from  '../utils/openai'
 import { API_OPTIONS } from '../utils/constant'
+import {addGptMovieResult} from "../utils/gptSlice";
 
 
 
@@ -12,10 +13,11 @@ import { API_OPTIONS } from '../utils/constant'
 const GptSearchBar = () => {
   const langKey=useSelector(store=>store.config.lang);
   const searchText=useRef(null);
+  const dispatch=useDispatch();
   //this will do a search movie in TMDB
   const searchMovieTMDB=async(movie)=>{
     const data =await fetch('https://api.themoviedb.org/3/search/movie?query=' +movie+ '&include_adult=false&language=en-US&page=1', API_OPTIONS);
-    const json=await data.json;
+    const json=await data.json();
     return json.results;
     
   }
@@ -32,12 +34,14 @@ const GptSearchBar = () => {
       const gptMovies=gptResults.choices?.[0]?.message?.content.split(",");
       //for each movie i will search TMDB API
       const promiseArray=gptMovies.map((movie)=> searchMovieTMDB(movie));
+      
       //map function will do 5 api calls at a time and will not wait for the result it only gives array of promises;
       //**watch promise in namaste java script */ 
       //for each movie above we are caling searchmovie tmdb api
       // we cannot get results because it is async function
       const tmdbResults=await Promise.all(promiseArray);
       console.log(tmdbResults);
+      dispatch(addGptMovieResult({movieNames:gptMovies,movieResults:tmdbResults}));
       
   }
   return (
