@@ -5,16 +5,18 @@ import { SRC_URL } from '../utils/constant'
 
 const GptSearch = () => {
   return (
-    <div>
-      <div className='fixed -z-10'> 
-        <img src={SRC_URL}
-        alt='logo'/>
-            
-        </div>
+    <><div className='fixed -z-10'> 
+    <img className='h-screen object-cover' src={SRC_URL}
+    alt='logo'/>
+        
+    </div>
+    <div className=''>
+    
         <GptSearchBar/>
         <GptMovieSuggestions/>
-
     </div> 
+    </>
+    
   )
 }
 

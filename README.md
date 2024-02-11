@@ -44,3 +44,11 @@ Netflix gpt
 
 -->**promise.all is where all the promise arrays will be resolved when we use await before it and wait until it get all the promises resolved***.
 --->even after going from gpt page to home and vce versa even the gpt search page is same because of persistent redux store
+-->we use .env to store the secret keys
+
+-->memoization means stopping from getting repeated api calls if we already have data in the store no need to refetch it for example if we have nowplaying in the store then we need not to refetch it because it is already present we no need to do api calls even we goto other pages
+
+--> by default mobile phone md means desktop sd means tab
+-->.env file
+adding .env file to git ignore
+-we made our site responsive

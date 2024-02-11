@@ -80,11 +80,11 @@ const Login = () => {
     <div>
         <Header />
         <div className='absolute'> 
-        <img src={SRC_URL}
+        <img className='h-screen object-cover' src={SRC_URL}
         alt='logo'/>
             
         </div>
-        <form  onSubmit={(e)=>e.preventDefault()} className=' p-12 bg-black absolute w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
+        <form  onSubmit={(e)=>e.preventDefault()} className='w-full p-12 bg-black absolute md:w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>
             <h1 className='font-bold text-3xl py-3 px-9'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
             {!isSignInForm && (
               <input ref={name} type='text' placeholder='Full Name' className='p-4 my-4 bg-gray-700 w-full rounded-lg ' />
